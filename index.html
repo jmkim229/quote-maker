@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간편견적서 — 무료 견적서 만들기 (회원가입 없음, PDF 저장)</title>
+<meta name="description" content="회원가입 없이 1분 만에 견적서를 만들고 PDF로 저장하세요. 프리랜서·소상공인을 위한 무료 견적서 양식, 부가세 자동 계산, 도장 삽입 지원.">
+<meta property="og:title" content="간편견적서 — 무료 견적서 만들기">
+<meta property="og:description" content="회원가입 없이 1분 만에 견적서 작성 후 PDF 저장. 부가세 자동 계산, 도장 삽입 지원.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>견</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--
+  [AdSense] 애드센스 승인 후 아래 주석을 해제하고 ca-pub-XXXX를 본인 코드로 교체하세요.
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./"><span class="brand-mark">견</span>간편견적서</a>
+    <nav class="site-nav">
+      <a href="./" class="active">견적서 만들기</a>
+      <a href="guide.html">사용 가이드</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>무료 견적서 만들기</h1>
+  <p>회원가입 없이 바로 작성하고 PDF로 저장하세요. 입력한 내용은 서버로 전송되지 않습니다.</p>
+</section>
+
+<main class="app-layout">
+
+  <!-- ==================== 입력 폼 ==================== -->
+  <div class="form-panel">
+
+    <section class="card">
+      <h2><span class="step">1</span>문서 정보</h2>
+      <div class="field-grid">
+        <div class="field">
+          <label for="f-quoteno">견적번호</label>
+          <input type="text" id="f-quoteno" placeholder="Q20260716-01">
+        </div>
+        <div class="field">
+          <label for="f-date">견적일자</label>
+          <input type="date" id="f-date">
+        </div>
+        <div class="field full">
+          <label for="f-valid">유효기간</label>
+          <select id="f-valid">
+            <option>견적일로부터 7일</option>
+            <option>견적일로부터 15일</option>
+            <option selected>견적일로부터 30일</option>
+            <option>견적일로부터 60일</option>
+            <option>별도 협의</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">2</span>받는 분 (고객)</h2>
+      <div class="field-grid">
+        <div class="field full">
+          <label for="f-client">상호 / 이름 *</label>
+          <input type="text" id="f-client" placeholder="예: (주)한빛디자인">
+        </div>
+        <div class="field">
+          <label for="f-client-manager">담당자</label>
+          <input type="text" id="f-client-manager" placeholder="홍길동 과장">
+        </div>
+        <div class="field">
+          <label for="f-client-tel">연락처</label>
+          <input type="text" id="f-client-tel" placeholder="010-0000-0000">
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">3</span>공급자 (내 정보)</h2>
+      <div class="remember-row">
+        <label class="remember-label">
+          <input type="checkbox" id="f-remember">
+          이 브라우저에 내 정보 기억하기
+        </label>
+        <p class="remember-hint">개인 PC에서만 켜세요. 체크를 해제하면 저장된 정보가 즉시 삭제됩니다. (공용·PC방 PC에서는 끄기)</p>
+      </div>
+      <div class="field-grid">
+        <div class="field">
+          <label for="f-company">상호 *</label>
+          <input type="text" id="f-company" placeholder="예: 재민스튜디오">
+        </div>
+        <div class="field">
+          <label for="f-owner">대표자</label>
+          <input type="text" id="f-owner" placeholder="김재민">
+        </div>
+        <div class="field full">
+          <label for="f-bizno">사업자등록번호</label>
+          <input type="text" id="f-bizno" placeholder="000-00-00000">
+        </div>
+        <div class="field full">
+          <label for="f-addr">주소</label>
+          <input type="text" id="f-addr" placeholder="서울특별시 ...">
+        </div>
+        <div class="field">
+          <label for="f-biztype">업태</label>
+          <input type="text" id="f-biztype" placeholder="서비스">
+        </div>
+        <div class="field">
+          <label for="f-bizitem">종목</label>
+          <input type="text" id="f-bizitem" placeholder="디자인">
+        </div>
+        <div class="field">
+          <label for="f-tel">연락처</label>
+          <input type="text" id="f-tel" placeholder="010-0000-0000">
+        </div>
+        <div class="field">
+          <label for="f-email">이메일</label>
+          <input type="text" id="f-email" placeholder="me@example.com">
+        </div>
+        <div class="field full">
+          <label>도장 / 서명 이미지 (PNG 권장, 1MB 이하)</label>
+          <div class="stamp-row">
+            <div class="stamp-preview" id="stamp-thumb"><span>미리<br>보기</span></div>
+            <button type="button" class="btn-sm" onclick="document.getElementById('stamp-file').click()">이미지 올리기</button>
+            <button type="button" class="btn-sm danger" id="stamp-remove">제거</button>
+            <input type="file" id="stamp-file" accept="image/*" hidden>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">4</span>품목<span class="hint">금액 = 수량 × 단가 자동 계산</span></h2>
+      <div class="items-head">
+        <span>품명</span><span>규격</span><span>수량</span><span>단가</span><span></span>
+      </div>
+      <div id="items-body"></div>
+      <button type="button" class="add-row" id="btn-add-row">＋ 품목 추가</button>
+
+      <div class="totals-mini">
+        <div><span>공급가액</span><span id="mini-supply">0원</span></div>
+        <div><span>부가세</span><span id="mini-vat">0원</span></div>
+        <div class="grand"><span>합계</span><span id="mini-total">0원</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">5</span>부가세 처리</h2>
+      <div class="vat-options">
+        <label><input type="radio" name="vat" value="separate" checked>별도 (+10%)</label>
+        <label><input type="radio" name="vat" value="included">포함</label>
+        <label><input type="radio" name="vat" value="none">없음 (면세)</label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">6</span>비고</h2>
+      <div class="field">
+        <textarea id="f-remarks" placeholder="예: 계약금 50% 선입금, 잔금은 납품 후 7일 이내&#10;무통장입금: OO은행 000-000-000000 (예금주)"></textarea>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button type="button" class="btn-primary" id="btn-print">🖨 PDF 저장 / 인쇄</button>
+      <button type="button" class="btn-ghost" id="btn-reset">초기화</button>
+    </div>
+    <p class="autosave-note">✓ 어떤 정보도 서버로 전송되지 않습니다. 작성 내용은 탭을 닫으면 사라집니다.</p>
+  </div>
+
+  <!-- ==================== 미리보기 ==================== -->
+  <div class="preview-panel">
+    <div class="preview-toolbar">
+      <span>실시간 미리보기 (A4)</span>
+    </div>
+    <div class="preview-wrap">
+      <div id="sheet-scaler">
+        <div class="sheet" id="quote-sheet">
+          <div class="sheet-title">견적서</div>
+
+          <div class="sheet-top">
+            <div class="sheet-meta">
+              <div class="recipient" id="s-recipient">귀하</div>
+              <div class="meta-line" id="s-client-sub" style="min-height:18px"></div>
+              <div class="meta-line"><b>견적일자</b> <span id="s-date"></span></div>
+              <div class="meta-line"><b>견적번호</b> <span id="s-quoteno"></span></div>
+              <div class="meta-line"><b>유효기간</b> <span id="s-valid"></span></div>
+              <div class="lead">아래와 같이 견적합니다.</div>
+            </div>
+
+            <div class="supplier-wrap">
+            <table class="supplier-box">
+              <tr>
+                <td class="sb-side" rowspan="5">공<br>급<br>자</td>
+                <td class="sb-label">등록번호</td>
+                <td class="sb-value" colspan="3" id="s-bizno"></td>
+              </tr>
+              <tr>
+                <td class="sb-label">상호</td>
+                <td class="sb-value" id="s-company"></td>
+                <td class="sb-label">대표자</td>
+                <td class="sb-value" style="padding-right:44px; white-space:nowrap"><span id="s-owner"></span> <span class="sign-hint" id="s-sign-hint">(인)</span></td>
+              </tr>
+              <tr>
+                <td class="sb-label">주소</td>
+                <td class="sb-value" colspan="3" id="s-addr"></td>
+              </tr>
+              <tr>
+                <td class="sb-label">업태</td>
+                <td class="sb-value" id="s-biztype"></td>
+                <td class="sb-label">종목</td>
+                <td class="sb-value" id="s-bizitem"></td>
+              </tr>
+              <tr>
+                <td class="sb-label">연락처</td>
+                <td class="sb-value" colspan="3" id="s-contact"></td>
+              </tr>
+            </table>
+            <div class="stamp-area" id="s-stamp"></div>
+            </div>
+          </div>
+
+          <div class="grand-bar">
+            <span class="gb-label">합계금액</span>
+            <span class="gb-korean" id="s-korean">金 원整</span>
+            <span class="gb-num" id="s-total-num">(₩ 0)</span>
+            <span class="gb-vat" id="s-vat-label">(부가세 포함)</span>
+          </div>
+
+          <table class="items-table">
+            <thead>
+              <tr>
+                <th style="width:38px">No</th>
+                <th>품명</th>
+                <th style="width:90px">규격</th>
+                <th style="width:56px">수량</th>
+                <th style="width:100px">단가</th>
+                <th style="width:110px">금액</th>
+              </tr>
+            </thead>
+            <tbody id="s-items"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" class="sum-label">공급가액</td>
+                <td colspan="2" class="r" id="s-supply"></td>
+              </tr>
+              <tr>
+                <td colspan="4" class="sum-label">부가세</td>
+                <td colspan="2" class="r" id="s-vat"></td>
+              </tr>
+              <tr>
+                <td colspan="4" class="sum-label">합계</td>
+                <td colspan="2" class="r" id="s-grand"></td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <div class="sheet-remarks">
+            <div class="rm-title">비고</div>
+            <div class="rm-body" id="s-remarks"></div>
+          </div>
+
+          <div class="sheet-footer">본 견적서는 간편견적서(무료 견적서 작성 도구)로 작성되었습니다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a href="guide.html">사용 가이드</a>
+      <a href="terms.html">이용약관</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
+    <div>© 2026 간편견적서 · 문의: jmkim229@gmail.com</div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
