@@ -52,6 +52,7 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
   font-weight: 800;
   color: var(--text);
   text-decoration: none;
+  white-space: nowrap;
 }
 .brand .brand-mark {
   width: 30px; height: 30px;
@@ -72,6 +73,7 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .site-nav a:hover { background: var(--primary-light); color: var(--primary); }
 .site-nav a.active { color: var(--primary); }
@@ -97,6 +99,8 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
 }
 
 /* ===== Form panel ===== */
+/* min-width:0 — 그리드 자식이 내용물(794px 시트) 폭만큼 커지며 모바일 화면을 밀어내는 것 방지 */
+.form-panel, .preview-panel { min-width: 0; }
 .form-panel { display: flex; flex-direction: column; gap: 16px; }
 
 .card {
@@ -321,6 +325,7 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
 .preview-wrap {
   overflow: hidden;
   border-radius: 6px;
+  max-width: 100%;
 }
 #sheet-scaler { transform-origin: top left; }
 
@@ -533,6 +538,12 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
   .field-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 21px; }
   .items-head, .item-row { grid-template-columns: 1.5fr 0.9fr 0.65fr 1fr 24px; }
+  .header-inner { padding: 0 12px; }
+  .brand { font-size: 17px; }
+  .brand .brand-mark { width: 26px; height: 26px; font-size: 14px; }
+  .site-nav a { padding: 8px 9px; font-size: 13px; }
+  .app-layout { padding: 14px 12px; }
+  .hero { padding: 20px 12px 4px; }
 }
 
 /* ===== Print ===== */
