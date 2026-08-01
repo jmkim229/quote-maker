@@ -550,7 +550,8 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
 @media print {
   @page { size: A4; margin: 0; }
   body { background: #fff; }
-  .site-header, .hero, .form-panel, .preview-toolbar, .site-footer, .actions, .adsense-slot { display: none !important; }
+  .site-header, .hero, .form-panel, .preview-toolbar, .site-footer, .actions, .adsense-slot,
+  .sheet-footer { display: none !important; } /* 견적서 PDF에는 서비스 문구를 넣지 않음 — 사용자 문서는 깨끗하게 */
   .app-layout { display: block; padding: 0; max-width: none; }
   .preview-panel { position: static; }
   .preview-wrap { overflow: visible; border-radius: 0; }
