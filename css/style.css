@@ -508,6 +508,70 @@ input, select, textarea { font-family: inherit; font-size: 14px; color: var(--te
   border-radius: 10px;
 }
 
+/* 검색 유입용 상단 요약 답변 */
+.content-page .answer-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: var(--text);
+}
+.content-page .answer-box strong { color: var(--primary-dark); }
+/* 본문 중간 CTA */
+.inline-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--primary-light);
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #1e40af;
+}
+.inline-cta a {
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 11px 18px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.inline-cta a:hover { background: var(--primary-dark); }
+/* 부가세 미니 계산기 */
+.vat-calc {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0 20px;
+}
+.vat-calc label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.vat-calc .calc-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.vat-calc input {
+  flex: 1 1 160px;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 12px;
+  font-size: 16px;
+}
+.vat-calc select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 10px;
+  font-size: 15px;
+  background: #fff;
+}
+.vat-calc table { margin: 12px 0 0; }
+.vat-calc td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+
 /* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid var(--border);
